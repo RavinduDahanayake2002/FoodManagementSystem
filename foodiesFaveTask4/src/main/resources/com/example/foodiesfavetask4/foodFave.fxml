@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.foodiesfavetask4.GUIController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="262.0" style="-fx-background-color: #41008c;">
+         <children>
+            <Button fx:id="menuButton1" alignment="BASELINE_LEFT" defaultButton="true" layoutX="-1.0" layoutY="144.0" mnemonicParsing="false" onAction="#addCustomerButton" onMouseEntered="#mouseEnter1" onMouseExited="#mouseExit1" prefHeight="40.0" prefWidth="263.0" style="-fx-background-color: #28025c; -fx-text-fill: white; -fx-border-radius: 0px; -fx-font-size: 15; -fx-cursor: hand;" styleClass="menuButton" text="  Add Customer">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="menuButton2" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="184.0" mnemonicParsing="false" onAction="#addBurger" onMouseEntered="#mouseEnter2" onMouseExited="#mouseExit2" prefHeight="40.0" prefWidth="263.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-border-radius: 0px; -fx-font-size: 15; -fx-cursor: hand;" styleClass="menuButton" text="  Add burgers to Stock">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/burger.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="menuButton3" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="224.0" mnemonicParsing="false" onAction="#removeCustomer1" onMouseEntered="#mouseEnter3" onMouseExited="#mouseExit3" prefHeight="40.0" prefWidth="263.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-border-radius: 0px; -fx-font-size: 15; -fx-cursor: hand;" styleClass="menuButton" text="  Remove a customer">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/user-forbid-line.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="menuButton4" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="265.0" mnemonicParsing="false" onAction="#removeServedCustomer1" onMouseEntered="#mouseEnter4" onMouseExited="#mouseExit4" prefHeight="40.0" prefWidth="263.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-border-radius: 0px; -fx-font-size: 15; -fx-cursor: hand;" styleClass="menuButton " text="  Remove a served customer">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/user-follow-line.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="menuButton5" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="306.0" mnemonicParsing="false" onAction="#alphabetical" onMouseEntered="#mouseEnter5" onMouseExited="#mouseExit5" prefHeight="40.0" prefWidth="263.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-border-radius: 0px; -fx-font-size: 15; -fx-cursor: hand;" styleClass="menuButton" text="  Sorted in alphabetical order">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/file-list-2-line.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="menuButton6" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="347.0" mnemonicParsing="false" onAction="#storeData" onMouseEntered="#mouseEnter6" onMouseExited="#mouseExit6" prefHeight="40.0" prefWidth="263.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-border-radius: 0px; -fx-font-size: 15; -fx-cursor: hand;" styleClass="menuButton" text="  Store data into file">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/save-line.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="menuButton7" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="388.0" mnemonicParsing="false" onAction="#loadData" onMouseEntered="#mouseEnter7" onMouseExited="#mouseExit7" prefHeight="40.0" prefWidth="263.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-border-radius: 0px; -fx-font-size: 15; -fx-cursor: hand;" styleClass="menuButton" text="  Load data from file">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/loop-left-line.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="menuButton8" layoutX="-1.0" layoutY="560.0" mnemonicParsing="false" onAction="#exitButton" onMouseEntered="#mouseEnter8" onMouseExited="#mouseExit8" prefHeight="40.0" prefWidth="263.0" style="-fx-background-color: #34017a; -fx-text-fill: white; -fx-border-radius: 0px; -fx-font-weight: bold; -fx-cursor: hand;" text="Exit the Program">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/close-circle-line.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView fitHeight="162.0" fitWidth="240.0" layoutX="22.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="675.0" layoutY="6.0" prefHeight="354.0" prefWidth="318.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 5px;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="37.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cashier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="233.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cashier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="134.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cashier.png" />
+               </image>
+            </ImageView>
+            <Region layoutX="15.0" layoutY="61.0" maxWidth="356.0" prefHeight="30.0" prefWidth="289.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #a442ff, #460080); -fx-background-radius: 30px; -fx-max-height: 40px;" />
+            <ImageView fx:id="c1c1" fitHeight="40.0" fitWidth="40.0" layoutX="42.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c3c4" fitHeight="40.0" fitWidth="40.0" layoutX="238.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c3c3" fitHeight="40.0" fitWidth="40.0" layoutX="238.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c3c2" fitHeight="40.0" fitWidth="40.0" layoutX="238.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c3c1" fitHeight="40.0" fitWidth="40.0" layoutX="238.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c2c3" fitHeight="40.0" fitWidth="40.0" layoutX="142.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c2c2" fitHeight="40.0" fitWidth="40.0" layoutX="142.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c2c1" fitHeight="40.0" fitWidth="40.0" layoutX="142.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="c3c5" fitHeight="40.0" fitWidth="40.0" layoutX="238.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="36.0" layoutY="68.0" style="-fx-font-weight: bold; -fx-text-fill: white;" text="Cashier 1" />
+            <Label layoutX="136.0" layoutY="68.0" style="-fx-font-weight: bold; -fx-text-fill: white;" text="Cashier 2" />
+            <Label layoutX="232.0" layoutY="68.0" style="-fx-font-weight: bold; -fx-text-fill: white;" text="Cashier 3" />
+            <ImageView fx:id="c1c2" fitHeight="40.0" fitWidth="40.0" layoutX="42.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@feet.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="270.0" layoutY="368.0" prefHeight="225.0" prefWidth="724.0" style="-fx-background-color: #e3e3e3; -fx-background-radius: 5px;">
+         <children>
+            <TableView fx:id="tableView" layoutX="8.0" layoutY="44.0" prefHeight="174.0" prefWidth="707.0">
+              <columns>
+                <TableColumn fx:id="tableFirstName" prefWidth="290.0" text="First Name" />
+                <TableColumn fx:id="tableLastName" prefWidth="271.0" text="Last Name" />
+                  <TableColumn fx:id="tableBurgers" prefWidth="145.0" text="No Of Burgers" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchFirstName" layoutX="298.0" layoutY="10.0" prefHeight="27.0" prefWidth="286.0" promptText="Customer first name" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 4px; -fx-border-color: rgb(200,200,200);" />
+            <Button layoutX="588.0" layoutY="11.0" mnemonicParsing="false" onAction="#searchCustomer" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-cursor: hand;" text="Search Customer" />
+         </children>
+      </Pane>
+      <Pane layoutX="269.0" layoutY="6.0" prefHeight="135.0" prefWidth="399.0" style="-fx-background-radius: 5px; -fx-background-color: #f0f0f0;">
+         <children>
+            <Label layoutX="14.0" layoutY="21.0" style="-fx-font-size: 14;" text="First Queue income" />
+            <Label layoutX="14.0" layoutY="45.0" style="-fx-font-size: 14;" text="Second Queue income" />
+            <Label layoutX="14.0" layoutY="69.0" style="-fx-font-size: 14;" text="Third Queue income" />
+            <Label layoutX="162.0" layoutY="21.0" style="-fx-font-size: 14;" text=":" />
+            <Label layoutX="162.0" layoutY="47.0" style="-fx-font-size: 14;" text=":" />
+            <Label layoutX="162.0" layoutY="70.0" style="-fx-font-size: 14;" text=":" />
+            <Label fx:id="firstQueueIncome" layoutX="174.0" layoutY="22.0" style="-fx-font-size: 14;" text="0" />
+            <Label fx:id="secondQueueIncome" layoutX="174.0" layoutY="49.0" style="-fx-font-size: 14;" text="0" />
+            <Label fx:id="thirdQueueIncome" layoutX="174.0" layoutY="72.0" style="-fx-font-size: 14;" text="0" />
+            <Label layoutX="15.0" layoutY="95.0" style="-fx-font-size: 14;" text="Available Burger stock" />
+            <Label fx:id="noOfBurgerLabel" layoutX="174.0" layoutY="96.0" style="-fx-font-size: 14;" text="0" />
+            <Label layoutX="162.0" layoutY="95.0" style="-fx-font-size: 14;" text=":" />
+         </children></Pane>
+      <Pane fx:id="addCustomerpanel" layoutX="269.0" layoutY="147.0" prefHeight="214.0" prefWidth="399.0" style="-fx-background-radius: 5px; -fx-background-color: #f0f0f0;">
+         <children>
+            <TextField fx:id="addCustomerFirstName" layoutX="14.0" layoutY="52.0" prefHeight="27.0" prefWidth="372.0" promptText="Enter customer first name" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 4px; -fx-border-color: rgb(200,200,200);" />
+            <Button layoutX="259.0" layoutY="163.0" mnemonicParsing="false" onAction="#newCustomerAdd" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-cursor: hand;" text="Add Customer" />
+            <TextField fx:id="addCustomerSecondName" layoutX="14.0" layoutY="89.0" prefHeight="27.0" prefWidth="372.0" promptText="Enter customer second name" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 4px; -fx-border-color: rgb(200,200,200);" />
+            <TextField fx:id="noOfBurgers" layoutX="14.0" layoutY="126.0" prefHeight="27.0" prefWidth="372.0" promptText="Enter no of burgers required" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 4px; -fx-border-color: rgb(200,200,200);" />
+            <Label layoutX="14.0" layoutY="21.0" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Add Customer" />
+         </children>
+      </Pane>
+      <Pane fx:id="removeCustomerPanel" layoutX="269.0" layoutY="147.0" prefHeight="180.0" prefWidth="399.0" style="-fx-background-radius: 5px; -fx-background-color: #f0f0f0;" visible="false">
+         <children>
+            <TextField fx:id="removePlace" layoutX="14.0" layoutY="89.0" prefHeight="27.0" prefWidth="372.0" promptText="Please enter place" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 4px; -fx-border-color: rgb(200,200,200);" />
+            <Button layoutX="259.0" layoutY="126.0" mnemonicParsing="false" onAction="#removeCustomer2" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-cursor: hand;" text="Remove Customer" />
+            <TextField fx:id="removeQueueNo" layoutX="14.0" layoutY="52.0" prefHeight="27.0" prefWidth="372.0" promptText="Please enter the queue no" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 4px; -fx-border-color: rgb(200,200,200);" />
+            <Label layoutX="14.0" layoutY="20.0" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Remove a customer" />
+         </children></Pane>
+      <Pane fx:id="removeServedCustomerPanel" layoutX="270.0" layoutY="147.0" prefHeight="142.0" prefWidth="399.0" style="-fx-background-radius: 5px; -fx-background-color: #f0f0f0;" visible="false">
+         <children>
+            <Button layoutX="260.0" layoutY="89.0" mnemonicParsing="false" onAction="#removedServedCustomer" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-cursor: hand;" text="Serve customer" />
+            <TextField fx:id="removedServedQueueNo" layoutX="14.0" layoutY="52.0" prefHeight="27.0" prefWidth="372.0" promptText="Please enter the queue no" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 4px; -fx-border-color: rgb(200,200,200);" />
+            <Label layoutX="14.0" layoutY="20.0" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Remove a served customer" />
+         </children>
+      </Pane>
+      <Pane fx:id="addBurgerPanel" layoutX="270.0" layoutY="147.0" prefHeight="142.0" prefWidth="399.0" style="-fx-background-radius: 5px; -fx-background-color: #f0f0f0;" visible="false">
+         <children>
+            <Button layoutX="260.0" layoutY="89.0" mnemonicParsing="false" onAction="#addBurgersGUI" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #41008c; -fx-text-fill: white; -fx-cursor: hand;" text="Add burgers" />
+            <TextField fx:id="addBurgerNumberOfBurger" layoutX="14.0" layoutY="52.0" prefHeight="27.0" prefWidth="372.0" promptText="How many burgers do you need to add to the stock" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 4px; -fx-border-color: rgb(200,200,200);" />
+            <Label layoutX="14.0" layoutY="20.0" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Add burgers to stock" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
